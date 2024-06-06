@@ -1,11 +1,11 @@
 {
-  "name": "seu-projeto",
+  "name": "meu-projeto",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Building the project...' && your-build-command",
-    "test": "echo 'Running tests...' && your-test-command"
+    "build": "echo 'Building the project...'", // Exemplo de comando de build
+    "test": "echo 'Running tests...'" // Exemplo de comando de teste
   },
   "dependencies": {
-    "your-dependency": "^1.0.0"
+    "express": "^4.17.1" // Dependência válida
   }
 }

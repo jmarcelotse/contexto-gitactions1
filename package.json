@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "build": "echo \"Building the project...\""
+    "test": "jest"
   },
   "devDependencies": {
     "jest": "^27.0.0"

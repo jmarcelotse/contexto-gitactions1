@@ -2,10 +2,10 @@
   "name": "meu-projeto",
   "version": "1.0.0",
   "scripts": {
-    "build": "echo 'Building the project...'", // Exemplo de comando de build
-    "test": "echo 'Running tests...'" // Exemplo de comando de teste
+    "build": "echo 'Building the project...'",
+    "test": "echo 'Running tests...'"
   },
   "dependencies": {
-    "express": "^4.17.1" // Dependência válida
+    "express": "^4.17.1"
   }
 }

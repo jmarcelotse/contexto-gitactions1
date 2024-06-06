@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -11,11 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
     steps:
-      - name: Checkout code
+      - name: Check out the repository
         uses: actions/checkout@v2
 
       - name: Set up Node.js
@@ -26,25 +24,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
-
       - name: Run tests
         run: npm test
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    env:
-      ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
-      API_KEY: ${{ secrets.PRODUCTION_API_KEY }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Deploy to production
-        run: |
-          echo "Deploying to $ENVIRONMENT environment"
-          echo "Using API key: $API_KEY"
-          # Comando de implantação aqui
-          # Exemplo: npm run deploy -- --env=$ENVIRONMENT --api-key=$API_KEY
